@@ -1,0 +1,284 @@
+:root {
+    --primary-color: #2f2f2f;
+    --secondary-color: #67bbb8;
+    --border-color: rgba(0, 247, 255, 0.623);
+    --span: rgba(7, 206, 212, 0.788);
+    --df_transition: .3s;
+    --df_size: 250px
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+
+main {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+
+
+main>div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+}
+
+main>div:nth-child(1)>div {
+    height: calc(var(--df_size) + 50px);
+    padding: 10px;
+    display: grid;
+    max-width: 950px;
+    overflow-x: scroll;
+    grid-auto-flow: column;
+    align-items: end;
+    position: relative;
+}
+
+main>div:nth-child(1) {
+    display: flex;
+}
+
+
+footer {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25%;
+}
+
+hr {
+    background: white;
+    width: 90%;
+
+}
+
+p:hover {
+    color: var(--span);
+}
+
+span {
+    top: 20px;
+    margin-left: 15px;
+    position: absolute;
+    color: var(--span);
+    min-width: 25%;
+    visibility: hidden;
+}
+
+
+/****DEBUT****/
+.time>p {
+    font-size: 22px;
+}
+
+.time>p:nth-child(2) {
+    font-size: 10px;
+}
+
+.flex_row {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.flex_column {
+    display: flex;
+    flex-flow: column;
+}
+
+.gap5 {
+    gap: 5px;
+}
+
+
+
+
+
+.game {
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    transition: var(--df_transition);
+
+}
+
+.game:hover {
+    transition: var(--df_transition);
+    border-radius: 7px;
+    border: 6px solid var(--border-color);
+    outline: 2px solid var(--span);
+    box-shadow: 2px 1px 10px var(--border-color);
+}
+
+.game:hover+span {
+    visibility: visible;
+    transition: var(--df_transition);
+    animation: appear var(--df_transition);
+    animation-fill-mode: both;
+}
+
+.bg_size {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.profil_pic {
+    cursor: pointer;
+    background-image: url(./../ressources/images/profl_pic.png);
+    border-radius: 100%;
+    outline: 4px solid white;
+    box-shadow: 2px 1px 10px var(--border-color);
+    transition:var(--df_transition);
+}
+.profil_pic:hover{
+    outline: 4px solid var(--border-color);
+    transition: var(--df_transition);
+}
+
+
+.picSize {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.circle {
+    padding: 5px;
+    transition: var(--df_transition);
+    border-radius: 100%;
+    background: white;
+    border: 4px solid white
+}
+
+.circle:hover {
+    border: 4px solid var(--secondary-color);
+    transition: var(--df_transition);
+    box-shadow: 2px 1px 10px var(--border-color);
+}
+
+/**IMG**/
+.wifi_ico {
+    width: 30px;
+    height: 30px;
+    background: url("./../ressources/images/icoWifi.png");
+}
+
+.bat_ico {
+    width: 40px;
+    height: 40px;
+    background-image: url("./../ressources/images/icoBatterie.png");
+}
+
+.msg_ico {
+
+    background-image: url("./../ressources/images/icoMsg.png");
+}
+
+.shop_ico {
+    background-image: url("./../ressources/images/icoPanier.png");
+}
+
+.image_ico {
+    background-image: url("./../ressources/images/icoLike.png");
+}
+
+.joycon_ico {
+    background-image: url("./../ressources/images/icoSwitch.png");
+}
+
+.setting_ico {
+    background-image: url("./../ressources/images/icoSun.png");
+}
+
+.shutdow_ico {
+    background-image: url("./../ressources/images/icoOff.png");
+}
+
+.switch_ico {
+    height: 30px;
+    width: 100px;
+    background-image: url("./../ressources/images/icoSwitch2.png");
+}
+
+.option_ico {
+    height: 30px;
+    width: 30px;
+    background-image: url("./../ressources/images/ico-button-A.png");
+
+}
+
+/**GAME SECTION CSS**/
+.game {
+    margin-left: 15px;
+    margin-right: 5px;
+    width: var(--df_size);
+    height: var(--df_size);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./../ressources/images/g1.jpg");
+}
+
+.g1 {
+    background-image: url("./../ressources/images/g1.jpg");
+}
+
+.g2 {
+    background-image: url("./../ressources/images/g2.jpg");
+}
+
+.g3 {
+    background-image: url("./../ressources/images/g3.jpg");
+}
+
+.g4 {
+    background-image: url("./../ressources/images/g4.jpg");
+}
+
+.g5 {
+    background-image: url("./../ressources/images/g5.jpg");
+}
+
+.g6 {
+    background-image: url("./../ressources/images/g6.jpg");
+}
+
+
+/***ANIMATION KEYFRAMES***/
+@keyframes appear {
+    from {
+        top: 30px;
+        opacity: 0;
+    }
+
+    to {
+        top: 10px;
+        opacity: 1;
+    }
+
+}
