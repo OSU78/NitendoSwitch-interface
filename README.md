@@ -1,3 +1,3 @@
 # NitendoSwitch-interface
 Intégration de l'interface de la Nintendo Switch réalisé en Html/CSS 😌
-![resultat]("./resultat.png")
+![resultat](https://github.com/OSU78/NitendoSwitch-interface/blob/main/resultat.jpg)
